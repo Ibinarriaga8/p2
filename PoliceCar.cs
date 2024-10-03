@@ -1,6 +1,6 @@
 ﻿namespace Practice1
 {
-    public class PoliceCar : Vehicle
+    public class PoliceCar : RegisteredVehicle
        {
        //constant string as TypeOfVehicle wont change along PoliceCar instances
        private const string typeOfVehicle = "Police Car";
@@ -22,7 +22,7 @@
            speedRadar = new SpeedRadar(); //create a radar for the PoliceCar
        }
 
-       public void UseRadar(Vehicle vehicle)
+       public void UseRadar(RegisteredVehicle vehicle)
        {
            if (speedRadar != null)
            {

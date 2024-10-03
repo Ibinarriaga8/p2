@@ -22,7 +22,7 @@ namespace Practice1
             alert = true;
         }
 
-        public void NotifyPolice(Vehicle car)
+        public void NotifyPolice(RegisteredVehicle car)
         {
             //Notify each police car in police station
             foreach (PoliceCar policeCar in policeCars) 

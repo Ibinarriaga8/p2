@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Practice1;
+public class UnRegisteredVehicle : Vehicle
+{
+    //Class for vehicles without plate
+
+    public UnRegisteredVehicle(string typeOfVehicle) : base(typeOfVehicle){}
+
+
+    public override string ToString()
+    {
+        return $"{GetTypeOfVehicle()}: ";
+    }
+}
