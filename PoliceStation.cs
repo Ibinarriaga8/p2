@@ -27,7 +27,7 @@ namespace Practice1
             //Notify each police car in police station
             foreach (PoliceCar policeCar in policeCars) 
             { 
-               policeCar.ChaseCar(car);
+               policeCar.ChaseCar(car.GetPlate());
             }
         }
         public void AddPoliceCar(string plate)

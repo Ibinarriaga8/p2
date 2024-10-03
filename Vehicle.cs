@@ -1,6 +1,6 @@
 ﻿namespace Practice1
 {
-    abstract class Vehicle : IMessageWritter
+    public abstract class Vehicle : IMessageWritter
     {
         private string typeOfVehicle;
         private string plate;
@@ -46,3 +46,4 @@
             return $"{this}: {message}";
         }
     }
+}
