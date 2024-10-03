@@ -22,12 +22,17 @@ namespace Practice1
         {
             Taxi taxi = new Taxi(plate);
             TaxiLicenses.Add(taxi);
+            Console.WriteLine($"Taxi with plate {plate} registered succesfully");
         }
 
         public void RemoveTaxiLicence(Taxi taxi)
         {
             TaxiLicenses.Remove(taxi);
+            Console.WriteLine($"Taxi with plate {taxi.GetPlate()} removed succesfully");
         }
+
+        public List<Taxi> GetTaxis()
+            { return TaxiLicenses; }
         
 
     }

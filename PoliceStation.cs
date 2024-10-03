@@ -17,24 +17,29 @@ namespace Practice1
             policeCars = new List<PoliceCar>();
         }
 
+
+
         public void AlertCar(string plate)
         {
             alert = true;
-        }
-
-        public void NotifyPolice(RegisteredVehicle car)
-        {
             //Notify each police car in police station
+            Console.WriteLine($"Alarm activated: all police cars proceed to pursuit vehicle with plate {plate}"); 
             foreach (PoliceCar policeCar in policeCars) 
             { 
-               policeCar.ChaseCar(car.GetPlate());
+               policeCar.ChaseCar(plate);
             }
         }
         public void AddPoliceCar(string plate)
         {
             PoliceCar policeCar = new PoliceCar(plate); //registrar coches mediante su matrícula
+            Console.WriteLine($"Police car with plate {plate} registered succesfully");
+            policeCar.SetStation(this);
             policeCars.Add(policeCar);
         }
+
+        public List<PoliceCar> GetPoliceCars()
+        { return policeCars;}
+
 
     }
 }
